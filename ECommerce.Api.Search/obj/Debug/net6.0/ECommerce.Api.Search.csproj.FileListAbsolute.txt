@@ -23,3 +23,15 @@ D:\TestProject\CoreMVC\ECommerce\ECommerce.Api.Search\obj\Debug\net6.0\refint\EC
 D:\TestProject\CoreMVC\ECommerce\ECommerce.Api.Search\obj\Debug\net6.0\ECommerce.Api.Search.pdb
 D:\TestProject\CoreMVC\ECommerce\ECommerce.Api.Search\obj\Debug\net6.0\ECommerce.Api.Search.genruntimeconfig.cache
 D:\TestProject\CoreMVC\ECommerce\ECommerce.Api.Search\obj\Debug\net6.0\ref\ECommerce.Api.Search.dll
+D:\TestProject\CoreMVC\ECommerce\ECommerce.Api.Search\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+D:\TestProject\CoreMVC\ECommerce\ECommerce.Api.Search\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\TestProject\CoreMVC\ECommerce\ECommerce.Api.Search\bin\Debug\net6.0\Microsoft.Extensions.Http.dll
+D:\TestProject\CoreMVC\ECommerce\ECommerce.Api.Search\bin\Debug\net6.0\Microsoft.Extensions.Http.Polly.dll
+D:\TestProject\CoreMVC\ECommerce\ECommerce.Api.Search\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
+D:\TestProject\CoreMVC\ECommerce\ECommerce.Api.Search\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\TestProject\CoreMVC\ECommerce\ECommerce.Api.Search\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+D:\TestProject\CoreMVC\ECommerce\ECommerce.Api.Search\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+D:\TestProject\CoreMVC\ECommerce\ECommerce.Api.Search\bin\Debug\net6.0\Polly.dll
+D:\TestProject\CoreMVC\ECommerce\ECommerce.Api.Search\bin\Debug\net6.0\Polly.Extensions.Http.dll
+D:\TestProject\CoreMVC\ECommerce\ECommerce.Api.Search\obj\Debug\net6.0\ECommerce.Api.Search.csproj.AssemblyReference.cache
+D:\TestProject\CoreMVC\ECommerce\ECommerce.Api.Search\obj\Debug\net6.0\ECommerce.Api.Search.csproj.CopyComplete

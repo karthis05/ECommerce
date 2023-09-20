@@ -2,7 +2,7 @@
 {
     public interface IOrdersProvider
     {
-        Task<(bool isSuccess, Models.Order, string Error)> GetOrdersAsync(int customerId);
+        Task<(bool isSuccess, IEnumerable<Models.Order>, string Error)> GetOrdersAsync(int customerId);
 
     }
 }

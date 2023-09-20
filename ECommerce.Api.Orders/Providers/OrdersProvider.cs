@@ -23,12 +23,18 @@ namespace ECommerce.Api.Orders.Providers
         {
             if (!DbContext.Order.Any())
             {
-                DbContext.Order.Add(new Db.Order { Id = 1, CustomerId = 1, OrderDate = DateTime.Now.AddDays(-10).Date, Total = 25, Items = new List<Db.OrderItem> { new Db.OrderItem { Id = 1, OrderId = 1, ProductId = 12, Quantity = 10, UnitPrice = 300 } } });
+                List<Db.OrderItem> OrderItems = new List<Db.OrderItem>();
+                OrderItems.Add(new Db.OrderItem { Id = 1, OrderId = 1, ProductId = 1, Quantity = 10, UnitPrice = 300 });
+                OrderItems.Add(new Db.OrderItem { Id = 2, OrderId = 2, ProductId = 2, Quantity = 101, UnitPrice = 200 });
+                OrderItems.Add(new Db.OrderItem { Id = 3, OrderId = 3, ProductId = 3, Quantity = 102, UnitPrice = 350 });
+                OrderItems.Add(new Db.OrderItem { Id = 4, OrderId = 4, ProductId = 4, Quantity = 104, UnitPrice = 350 });
+
+                DbContext.Order.Add(new Db.Order { Id = 1, CustomerId = 1, OrderDate = DateTime.Now.AddDays(-10).Date, Total = 25, Items = OrderItems });
                 DbContext.SaveChanges();
             }
         }
 
-        public async Task<(bool isSuccess, Models.Order, string Error)> GetOrdersAsync(int customerId)
+        public async Task<(bool isSuccess, IEnumerable<Models.Order>, string Error)> GetOrdersAsync(int customerId)
         {
             try
             {
@@ -36,16 +42,16 @@ namespace ECommerce.Api.Orders.Providers
 
                 if (result != null && result.Count>0)
                 {
-                    var orders = Mapper.Map<Db.Order, Models.Order>(result[0]);
+                    var orders = Mapper.Map<IEnumerable<Db.Order>, IEnumerable<Models.Order>>(result);
 
                     return (true, orders, "");
                 }
-                return (false, new Models.Order(), "Not Found");
+                return (false, null, "Not Found");
             }
             catch (Exception ex) 
             {
                 Logger.LogError(ex.ToString());
-                return (false, new Models.Order(), ex.Message);
+                return (false, null, ex.Message);
             }
         }
        
